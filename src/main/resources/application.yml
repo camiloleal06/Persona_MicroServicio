@@ -1,0 +1,12 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URI:http://1213f2f.online-server.cloud:8081/eureka}
+  instance:
+    instance-id: ${spring.application.name}:${random.int(10000)}
+spring:
+  application:
+    name: person-microservice
+  cloud:
+    config:
+      profile: dev
